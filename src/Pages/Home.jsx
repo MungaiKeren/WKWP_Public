@@ -11,6 +11,7 @@ import Partners from "../components/Home/Partners";
 import Benefits from "../components/Home/Benefits";
 import HeroSection from "../components/Home/HeroSection";
 import Counties from "../components/Home/Counties";
+import ExpectedImpact from "../components/Home/ExpectedImpact";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
       </div>
       <HeroSection />
       <Counties />
-      <About />
+      <ExpectedImpact />
       <Services />
       <Partners />
       <Benefits />
