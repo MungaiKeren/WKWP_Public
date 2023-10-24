@@ -186,6 +186,9 @@
       }
     }
   }
+  button{
+    cursor: pointer;
+  }
 
   .hero-section{
     width: 100%;
@@ -193,6 +196,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    transition: opacity 0.5s ease-in-out;
+
     img{
       max-height: 100%;
       height: 100%;
@@ -202,9 +207,7 @@
     .overlay{
       height: 86vh;
       position: absolute;
-      /* top: 0; */
       background-color: rgba(0, 0, 0, 0.2);
-      // z-index: 999;
       bottom: 0;
       left: 0;
       right: 0;
@@ -222,7 +225,7 @@
       padding: 2em;
       color: white;
       // transform: translateY(50px);
-      // transition: opacity 0.5s ease, transform 0.5s ease;
+      transition: opacity 0.5s ease, transform 0.5s ease;
 
       .row{
         max-width: 85%;
@@ -230,7 +233,7 @@
         margin: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 13em;
+        gap: 5em;
         .left{
           display: grid;
           grid-template-rows: auto auto;
@@ -270,6 +273,53 @@
         width: 60px;
       }
     }
+  }
+
+  .counties{
+    background: linear-gradient(180deg, #0064B6 0%, #002F6C 100%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    padding: 2em 1em;
+
+    .left{
+      text-align: center;
+      img{
+        object-fit: cover;
+        height: 307px;
+      }
+    }
+    .right{
+      h4{
+        color: #FFF;
+        font-size: x-large;
+        margin-left: 4em;
+        margin-bottom: 10px;
+      }
+      hr{
+        width: 53%;
+        text-align: center;
+        padding: 3px;
+        background: $secondary;
+        border: $secondary;
+        margin-left: 46px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      }
+
+      .two-equal{
+        margin-top: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        p{
+          color: #FFF;
+          font-size: larger;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          padding: 1em 0;
+        }
+      }
+    }    
   }
 
   .data {

@@ -3,7 +3,7 @@ import img from "../../assets/images/people.png";
 import tap from "../../assets/images/Tap.png";
 import vessel from "../../assets/images/vessel.png";
 
-export default function Hero2(props) {
+export default function HeroSection(props) {
     return (
       <div className="hero-section">
         <img src={img} alt="" />
