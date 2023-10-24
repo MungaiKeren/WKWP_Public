@@ -9,6 +9,7 @@ import About from "../components/Home/About";
 import Services from "../components/Home/Services";
 import Partners from "../components/Home/Partners";
 import Benefits from "../components/Home/Benefits";
+import Hero2 from "../components/Home/Hero2";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <div className="headings">
         <Header active="Home"/>
       </div>
-      <Hero />
+      <Hero2 />
       <Data />
       <About />
       <Services />
