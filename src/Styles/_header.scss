@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   z-index: 9999;
-  background-color: #eee2de;
+  background-color: $primary;
   box-shadow: 1px 1px 5px #60606030;
 
   .contacts {
@@ -84,12 +84,27 @@
     margin: auto; 
 
     .wrapper {
-      width: fit-content;
-      margin: auto;
+      // width: fit-content;
+      // margin: auto;
       padding: 1em;
       gap: 1em;
       display: grid;
-      grid-template-columns: repeat(8, auto);
+      grid-template-columns: repeat(2, auto);
+      justify-content: space-between;
+      align-items: center;
+
+      .innerwrapper{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 1em;
+      }
+
+      .contactus{
+        background: white;
+        color: $primary;
+        padding: 5px;
+        border-radius: 5px;
+      }
 
       .underline {
         color: $secondary;
@@ -103,16 +118,17 @@
         a {
           text-decoration: none;
           font-size: medium;
-          color: $secondary;
-          padding: 10px;
+          color: $white;
+          padding: 5px;
           cursor: pointer;
         }
         a:hover {
-          color: $primary;
+          color: $primarylighter;
         }
 
         .active {
-          color: $primary;
+          border: 1px solid;
+          border-radius: 5px;
         }
         a {
           i {

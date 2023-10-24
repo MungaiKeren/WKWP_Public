@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
+import usaid_logo from "../../assets/images/usaid_logo.png";
+import wkwp_logo from "../../assets/images/wkwp_logo.png";
 import logo from "../../assets/images/logo.png";
 import HeaderModal from "./modal_header";
 
@@ -86,47 +87,42 @@ export default function Header(props) {
                 onClick={() => {
                   window.location.href = "/";
                 }}
-                src={logo}
+                src={usaid_logo}
                 alt=""
               />
-              <h1>Kiri AMIS</h1>
             </div>
-            <a href="tel:+254700000000">
-              <i className="fa ">&#xf095;</i> 0700 000 000
-            </a>
-            <a href="mailto:info@kiriamis.co.ke">
-              <i className="fa ">&#xf1fa;</i> info@kiriamis.co.ke
-            </a>
+            <div>
+              <img
+                onClick={() => {
+                  window.location.href = "/";
+                }}
+                src={wkwp_logo}
+                alt=""
+              />
+            </div>
           </div>
         </div>
         <div className="hcontainer">
           <div className="wrapper">
-            <NavLink txt="Home" url="/" active={props.active} />
-            <NavLink
-              txt="Portals"
-              url="/portal"
-              active={props.active}
-              setIsOpen={setIsOpen}
-              isOpen={isOpen}
-            />
-            <NavLink
-              txt="Stakeholders"
-              url="/stakeholders"
-              active={props.active}
-            />
+            <div className="innerwrapper">
+              <NavLink txt="Home" url="/" active={props.active} />
               <NavLink
-              txt="Projects"
-              url="/projects"
-              active={props.active}
-            />
-            <NavLink txt="Resource Center" url="/arc" active={props.active} />
-            <NavLink txt="News" url="/news" active={props.active} />
-            <NavLink
-              txt="Testimonials"
-              url="/testimonials"
-              active={props.active}
-            />
-            <NavLink txt="Contact Us" url="/contact" active={props.active} />
+                txt="Success Stories"
+                url="/portal"
+                active={props.active}
+                setIsOpen={setIsOpen}
+                isOpen={isOpen}
+              />
+              <NavLink
+                txt="Publications"
+                url="/stakeholders"
+                active={props.active}
+              />
+              <NavLink txt="About WKWP" url="/projects" active={props.active} />
+            </div>
+            <div className="contactus">
+              <p>Contact US</p>
+            </div>
           </div>
           <div className="mob">
             <i
