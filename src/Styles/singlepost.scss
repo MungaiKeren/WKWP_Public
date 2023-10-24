@@ -1,0 +1,65 @@
+@import "./_variables";
+@import "./0_mediaquery";
+
+.listnews {
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+
+  .singleInstance {
+    min-height: 70vh;
+    height: fit-content;
+
+    .container {
+      width: 100%;
+      max-width: 85%;
+      margin: 2em auto;
+
+      img {
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+        max-height: 40vh;
+        height: 100%;
+        object-position: center;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .content {
+        position: relative;
+        background: white;
+        box-shadow: 1px 1px 5px #60606030;
+        border: 1px solid #60606030;
+        padding: 10px;
+        margin: -3em 1em 0 1em;
+        border-radius: 10px;
+
+        h3 {
+          color: $secondary;
+          font-size: large;
+          font-weight: 600;
+          padding: 1em;
+          text-align: center;
+        }
+
+        p {
+          padding: 1em;
+          line-height: 1.7;
+        }
+
+        .dt {
+          display: flex;
+          gap: 1em;
+          align-items: center;
+          margin-bottom: 1em;
+        }
+
+        h5 {
+          color: black;
+          font-size: small;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

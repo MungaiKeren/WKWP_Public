@@ -1,0 +1,289 @@
+@import "./0_mediaquery";
+@import "./variables";
+
+.testimonials {
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+
+  .landing_hero {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .nhero {
+      height: 70vh;
+      position: relative;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      z-index: 999;
+
+      .slideshow-container {
+        position: relative;
+        height: 70vh;
+      }
+
+      .slideshow-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+
+        img {
+          max-height: 70vh;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        .content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0.3);
+          padding: 2em;
+          opacity: 0;
+          transform: translateY(50px);
+          transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .content.animation-active {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .left {
+          display: grid;
+          grid-template-rows: auto 1fr auto;
+          gap: 2em;
+          text-align: center;
+          color: white;
+          height: 100%;
+          max-width: 85%;
+          width: 100%;
+          margin: auto;
+
+          p {
+            padding: 0 0 34px 0;
+            position: relative;
+            text-align: left !important;
+            width: fit-content;
+            font-weight: 400;
+          }
+
+          p::before {
+            content: "";
+            position: absolute;
+            left: 7%;
+            bottom: 16px;
+            width: 150px;
+            height: 14px;
+            transform: skew(-12deg) translateX(-50%);
+            background: #ecc115;
+            z-index: -1;
+          }
+
+          h1 {
+            margin: auto;
+            font-family: "Ubuntu", sans-serif;
+            font-size: xx-large;
+            color: white;
+            text-align: center;
+            //letter-spacing: 5px;
+            //   text-shadow: 0 2px 1px #747474, -1px 3px 1px #767676,
+            //     -2px 5px 1px #787878, -3px 7px 1px #7a7a7a, -4px 9px 1px #7f7f7f;
+            // }
+          }
+
+          p {
+            font-size: x-large !important;
+            color: white;
+          }
+
+          button {
+            padding: 10px;
+            width: fit-content;
+            min-width: 200px;
+            display: block;
+            margin: auto;
+            cursor: pointer;
+            color: $primary;
+          }
+          button:hover {
+            background-color: $primary;
+            color: white;
+          }
+        }
+      }
+
+      .slideshow-image.active {
+        opacity: 1;
+      }
+
+      @include maxwidth(tablet) {
+        height: fit-content !important;
+        padding-top: 100px !important;
+        padding-bottom: 50px;
+
+        .div2equal {
+        }
+      }
+    }
+    .hero_buttons {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      margin-bottom: 0;
+      margin-bottom: 10px;
+      background: red;
+
+      .holding {
+        width: 15%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .radial {
+          height: 17px;
+          width: 17px;
+          border: solid 4px $primary;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: 300ms all ease-in-out;
+        }
+        .radial:hover {
+          border: 0px;
+          background: $primary;
+        }
+      }
+    }
+
+    .main {
+      z-index: 1;
+      overflow: hidden;
+      height: calc(100% - 64px);
+      position: absolute;
+      top: 64px;
+      left: 0;
+      width: 100%;
+
+      .wrp {
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+    }
+  }
+
+  .tsm {
+    background-color: #eee2de;
+
+    .container {
+      max-width: 85%;
+      width: 100%;
+      margin: auto;
+
+      h3 {
+        color: $primary;
+        font-size: medium;
+        margin: 10px 0 10px 0;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      h1 {
+        color: $primary;
+        font-size: xx-large;
+        margin: 10px 0 10px 0;
+        padding: 0 0 44px 0;
+        position: relative;
+        text-align: center !important;
+        width: fit-content;
+        display: block;
+        margin: auto;
+      }
+
+      h1::before {
+        content: "";
+        position: absolute;
+        left: 7%;
+        bottom: 16px;
+        width: 150px;
+        height: 14px;
+        transform: skew(-12deg) translateX(-50%);
+        background: #ecc115;
+        z-index: 2;
+      }
+      p {
+        line-height: 1.7;
+        font-size: medium;
+        font-weight: 400;
+        color: gray;
+        margin: 10px 0 10px 0;
+        text-align: center;
+      }
+
+      .test_content {
+        background-color: white;
+        padding: 1em;
+        margin: 4em 0 4em 0;
+        border-radius: 5px;
+
+        .tst {
+          grid-template-columns: 250px 1fr;
+        }
+
+        .testimony-author {
+          h3 {
+            font-size: large;
+            margin-top: 1em;
+            text-align: center;
+            color: $primary;
+          }
+          img {
+            max-height: 100px;
+            height: 100%;
+            width: fit-content;
+            object-fit: contain;
+            margin: auto;
+            display: block;
+          }
+        }
+
+        .testimony-content {
+          background-color: #404a3d;
+          margin: -2em -1em -2em 1em;
+          border-radius: 5px;
+          padding: 1em;
+          p {
+            color: white;
+          }
+          h3 {
+            color: #ecc115;
+            font-size: xx-large;
+          }
+        }
+
+        @include maxwidth(mobile) {
+          .tst {
+            grid-template-columns: 1fr !important;
+          }
+        }
+        @include maxwidth(tablet) {
+          .tst {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      }
+    }
+  }
+}

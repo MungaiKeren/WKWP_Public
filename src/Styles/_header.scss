@@ -1,0 +1,286 @@
+@import "./_variables";
+@import "./0_mediaquery";
+
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: #eee2de;
+  box-shadow: 1px 1px 5px #60606030;
+
+  .contacts {
+    border-bottom: 1px solid #60606030;
+    padding: 1em 0 1em 0;
+    background-color: white;
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      gap: 1em;
+      max-width: 85%;
+      width: 100%;
+      margin: auto;
+
+      div {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1em;
+        width: fit-content;
+
+        img {
+          display: block;
+          margin: auto;
+          max-height: 54px;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      h1 {
+        color: $primary;
+        margin: auto;
+      }
+
+      a {
+        text-decoration: none;
+        color: gray;
+        font-size: small;
+        display: block;
+        margin: auto;
+      }
+
+      .navlink {
+        position: relative;
+
+        .dropdown-content {
+          position: absolute !important;
+          background-color: $primary !important;
+          z-index: 9999;
+          display: grid !important;
+          grid-template-rows: auto !important;
+          width: max-content;
+          top: 100%;
+          left: 0%;
+
+          a {
+            color: #ffffff;
+            padding: 2px 4px;
+            text-decoration: none;
+          }
+
+          a:hover {
+            color: $accent;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .hcontainer {
+    max-width: 85%;
+    width: 100%;
+    margin: auto; 
+
+    .wrapper {
+      width: fit-content;
+      margin: auto;
+      padding: 1em;
+      gap: 1em;
+      display: grid;
+      grid-template-columns: repeat(8, auto);
+
+      .underline {
+        color: $secondary;
+      }
+
+      .outer {
+        position: relative;
+      }
+
+      .navlink {
+        a {
+          text-decoration: none;
+          font-size: medium;
+          color: $secondary;
+          padding: 10px;
+          cursor: pointer;
+        }
+        a:hover {
+          color: $primary;
+        }
+
+        .active {
+          color: $primary;
+        }
+        a {
+          i {
+            color: $secondary !important;
+            margin-left: 6px;
+          }
+        }
+      }
+      .dropdown-content {
+        position: absolute !important;
+        background-color: white !important;
+        z-index: 9999;
+        display: grid !important;
+        grid-template-rows: auto !important;
+        width: max-content;
+        top: 30px;
+        left: 0%;
+        padding: 10px;
+        box-shadow: 1px 1px 5px #60606030;
+
+        p {
+          color: $secondary;
+          font-size: small;
+          cursor: pointer;
+          text-decoration: none;
+          padding: 8px;
+        }
+
+        p:hover {
+          color: $primary;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .mob {
+      display: none;
+
+      i {
+        font-size: large;
+        width: fit-content;
+        text-align: center;
+        color: $primary;
+        margin: auto 0 auto auto;
+        display: block;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+
+    @include maxwidth(mobile) {
+      .right {
+        display: none;
+      }
+
+      .mob {
+        display: block;
+        order: 0;
+      }
+    }
+    @include maxwidth(tablet) {
+      .right {
+        display: none;
+      }
+
+      .mob {
+        display: block;
+        order: 0;
+      }
+    }
+  }
+
+  @include maxwidth(mobile) {
+    .contacts {
+      padding-left: 1em;
+      .container {
+        grid-template-columns: 1fr !important;
+
+        a {
+          display: none !important;
+        }
+      }
+    }
+    .hcontainer {
+      padding: 10px 0 10px 0 !important;
+      .wrapper {
+        display: none !important;
+      }
+    }
+  }
+  @include maxwidth(tablet) {
+    .contacts {
+      padding-left: 1em;
+      .container {
+        grid-template-columns: 1fr !important;
+
+        a {
+          display: none !important;
+        }
+      }
+    }
+    .hcontainer {
+      padding: 10px 0 10px 0 !important;
+      .wrapper {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.modalheader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  color: $primary;
+  z-index: 99999;
+  .container {
+    .itemsLogo {
+      background-color: #eee2de;
+      padding: 2em;
+
+      img {
+        max-height: 100px;
+        height: 100%;
+        display: block;
+        margin: auto;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: xx-large;
+        padding: 10px;
+      }
+    }
+
+    .nav {
+      padding: 2em;
+    }
+
+    .underline {
+      color: $secondary;
+    }
+
+    .fa-times {
+      padding: 2em;
+      display: block;
+      width: fit-content;
+      margin: auto;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: xx-large;
+      padding: 10px;
+    }
+
+    h4 {
+      font-weight: 600;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    p {
+      padding: 5px;
+      margin-left: 2em;
+    }
+  }
+}

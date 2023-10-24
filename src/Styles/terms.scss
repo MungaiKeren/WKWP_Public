@@ -1,0 +1,36 @@
+@import "./_variables";
+@import "./_0_mediaquery";
+
+.terms {
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+
+  .tnc {
+    .container {
+      max-width: 85%;
+      width: 100%;
+      margin: 2em auto 2em auto;
+
+      h1 {
+        color: $primary;
+        padding: 1em;
+        text-align: center;
+      }
+
+      h2 {
+        margin: 1em 0 5px 0;
+        font-weight: 600;
+        color: $primary;
+        font-size: large;
+      }
+
+      p {
+        font-size: medium;
+        line-height: 1.7;
+        color: gray;
+        padding: 10px 0 10px 0;
+      }
+    }
+  }
+}
