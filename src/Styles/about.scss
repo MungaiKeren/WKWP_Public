@@ -32,6 +32,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1em;
+        row-gap: 3em;
         align-items: center;
         padding: 2em 8em;
     }
@@ -88,5 +89,23 @@
 
     .approach{
         padding: 2em;
+        .bg{
+            background-image: url("../assets/images/about\ bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        p{
+            border: 1px solid $primary;
+            color: #000;
+            font-size: large;
+            font-weight: 400;
+            padding: 2em;
+            width: 30vw;
+            height: 20vh;
+        }
+        p.red{
+            border: 1px solid $secondary;
+        }
     }
 }
