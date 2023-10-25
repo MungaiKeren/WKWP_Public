@@ -1,4 +1,4 @@
-import "../Styles/stakeholders.scss";
+import "../Styles/publications.scss";
 import { useEffect, useState } from "react";
 import Header from "../components/Utils/header";
 import BlogPost from "../components/News/BlogPost";
@@ -9,7 +9,7 @@ import { useRef } from "react";
 import Pagination from "../components/Utils/Pagination";
 import WaveLoading from "../components/Utils/WaveLoading";
 
-export default function Stakeholders(props) {
+export default function Publications(props) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(null);
   const [filter, setFilter] = useState("All");
@@ -71,9 +71,8 @@ export default function Stakeholders(props) {
   return (
     <div className="stakeholders">
       <Header />
-      <Hero />
       <div className="slist">
-        <h1>Stakeholders</h1>
+        <h1>Publications: Inside Stories and Interviews</h1>
         <div className="container">
           <div className="left">
             <Category

@@ -11,7 +11,7 @@ import Services from "./Pages/Services";
 import NewsCreate from "./Pages/NewsCreate";
 import NewsBlog from "./Pages/NewsBlog";
 import NewsSingleInstance from "./Pages/NewsSingleInstance";
-import Stakeholders from "./Pages/Stakeholders";
+import Publications from "./Pages/Publications";
 import ARC from "./Pages/ARC";
 import Terms from "./Pages/Terms";
 import Privacy from "./Pages/Privacy";
@@ -44,8 +44,8 @@ function App() {
           <NewsBlog />
         </Route>
 
-        <Route exact path="/stakeholders">
-          <Stakeholders />
+        <Route exact path="/publications">
+          <Publications />
         </Route>
 
         <Route exact path="/projects">
