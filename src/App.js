@@ -17,6 +17,7 @@ import Terms from "./Pages/Terms";
 import Privacy from "./Pages/Privacy";
 import Projects from "./Pages/Projects";
 import About from "./Pages/About";
+import SuccessStories from "./Pages/SuccessStories";
 
 function App() {
   return (
@@ -30,8 +31,8 @@ function App() {
           <About />
         </Route>
 
-        <Route exact path="/portal">
-          <Portal />
+        <Route exact path="/success">
+          <SuccessStories />
         </Route>
 
         <Route exact path="/Services">

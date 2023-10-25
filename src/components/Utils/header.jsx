@@ -108,7 +108,7 @@ export default function Header(props) {
               <NavLink txt="Home" url="/" active={props.active} />
               <NavLink
                 txt="Success Stories"
-                url="/portal"
+                url="/success"
                 active={props.active}
                 setIsOpen={setIsOpen}
                 isOpen={isOpen}
