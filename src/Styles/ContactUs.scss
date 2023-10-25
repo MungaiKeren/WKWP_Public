@@ -5,181 +5,104 @@
   height: 100vh;
   overflow-y: auto;
 
-  .landing_hero {
-    width: 100%;
+  .hero{
+    background-image: url("../assets/images/contactus.png");
+    background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    color: white;
+    height: 400px;
 
-    .nhero {
-      height: 70vh;
-      position: relative;
-      background-color: rgba($color: #000000, $alpha: 0.5);
-      z-index: 999;
+    .txt{
+      padding: 2em 9em;
+      width: 50%;
+      
+      h4{
+        font-size: x-large;
+      }
+    }
+  }
 
-      .slideshow-container {
-        position: relative;
-        height: 70vh;
+
+  .form-content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    .left{
+      padding: 2em;
+      background-color: white;
+
+      h4{
+        color: #002F6C;
+        font-size: larger;
       }
 
-      .slideshow-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
+      .two-equal{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
 
-        img {
-          max-height: 70vh;
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-        }
-
-        .content {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          background-color: rgba(0, 0, 0, 0.3);
-          padding: 2em;
-          opacity: 0;
-          transform: translateY(50px);
-          transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .content.animation-active {
-          opacity: 1;
-          transform: translateY(0);
-        }
-
-        .left {
+        div{
           display: grid;
-          grid-template-rows: auto 1fr auto;
-          gap: 2em;
-          text-align: center;
-          color: white;
-          height: 100%;
-          max-width: 85%;
-          width: 100%;
-          margin: auto;
-
-          p {
-            padding: 0 0 34px 0;
-            position: relative;
-            text-align: left !important;
-            width: fit-content;
-            font-weight: 400;
-          }
-
-          p::before {
-            content: "";
-            position: absolute;
-            left: 7%;
-            bottom: 16px;
-            width: 150px;
-            height: 14px;
-            transform: skew(-12deg) translateX(-50%);
-            background: #ecc115;
-            z-index: -1;
-          }
-
-          h1 {
-            margin: auto;
-            font-family: "Ubuntu", sans-serif;
-            font-size: xx-large;
-            color: white;
-            text-align: center;
-            //letter-spacing: 5px;
-            //   text-shadow: 0 2px 1px #747474, -1px 3px 1px #767676,
-            //     -2px 5px 1px #787878, -3px 7px 1px #7a7a7a, -4px 9px 1px #7f7f7f;
-            // }
-          }
-
-          p {
-            font-size: x-large !important;
-            color: white;
-          }
-
-          button {
-            padding: 10px;
-            width: fit-content;
-            min-width: 200px;
-            display: block;
-            margin: auto;
-            cursor: pointer;
-            color: $primary;
-          }
-          button:hover {
-            background-color: $primary;
-            color: white;
-          }
+          grid-template-rows: 1fr 1fr;
+          padding: 1em 0
+          // gap: 1em;
         }
       }
 
-      .slideshow-image.active {
-        opacity: 1;
+      .message{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        padding: 1em 0
       }
 
-      @include maxwidth(tablet) {
-        height: fit-content !important;
-        padding-top: 100px !important;
-        padding-bottom: 50px;
+      input, textarea{
+        height: 34px;
+        border: none;
+        border-bottom: 1px solid $secondary;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 2px;
 
-        .div2equal {
-        }
       }
-    }
-    .hero_buttons {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-      margin-bottom: 0;
-      margin-bottom: 10px;
-      background: red;
 
-      .holding {
-        width: 15%;
-        height: 100%;
-        display: flex;
-        justify-content: space-around;
+      input:focus, textarea:focus{
+        outline: none;
+        border-bottom: 1px solid $primary;
+      }
 
-        .radial {
-          height: 17px;
-          width: 17px;
-          border: solid 4px $primary;
-          border-radius: 50%;
-          cursor: pointer;
-          transition: 300ms all ease-in-out;
-        }
-        .radial:hover {
-          border: 0px;
+      ::placeholder{
+        color: $primary;
+        font-family: 'inter';
+        font-size: small;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-left: 2px;
+      }
+      
+      label{
+        color: $primary;
+        font-family: 'Inter';
+        font-size: medium;
+      }
+
+      .btn{
+        text-align: right;
+        button{
           background: $primary;
+          border: none;
+          color: white;
+          padding: 8px;
         }
       }
     }
 
-    .main {
-      z-index: 1;
-      overflow: hidden;
-      height: calc(100% - 64px);
-      position: absolute;
-      top: 64px;
-      left: 0;
-      width: 100%;
-
-      .wrp {
-        height: 100%;
-        width: 100%;
-        position: relative;
-      }
+    .right{
+      background-color: $primary;
+      text-align: center;
+      color: white;
     }
   }
 

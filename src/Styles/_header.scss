@@ -178,6 +178,9 @@
         line-height: 30px;
       }
     }
+    .contactus{
+      cursor: pointer;
+    }
 
     @include maxwidth(mobile) {
       .right {

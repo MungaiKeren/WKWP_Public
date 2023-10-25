@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 import Footer from "../components/Utils/footer";
 import "../Styles/ContactUs.scss";
 import Header from "../components/Utils/header";
-import Hero from "../components/Home/Hero";
 
 export default function ContactUsPage(props) {
   const [isErr, setIsErr] = useState("");
@@ -90,7 +89,69 @@ export default function ContactUsPage(props) {
       <div className="headings">
         <Header />
       </div>
-      <Hero />
+
+      <div className="hero">
+        <div className="txt">
+          <h4>Let's Start a Conversation</h4>
+          <p>
+            Thank you for visiting our website. Might you be having any trouble
+            and need our assistance? Well, we are eager to help! Just log a
+            message to us and our customer service team will respond to your
+            needs as soon as possible
+          </p>
+        </div>
+      </div>
+
+      <div className="form-content">
+        <div className="left">
+          <h4>Send us a message</h4>
+
+          <div className="two-equal">
+            <div>
+              <label htmlFor="First Name">First Name</label>
+              <input
+                type="text"
+                placeholder="First Name*"
+                ref={rfEmail}
+              />
+            </div>
+            <div>
+              <label htmlFor="Last Name">Last Name</label>
+              <input label="Last Name" placeholder="Last Name*" ref={rfEmail} />
+            </div>
+          </div>
+
+          <div className="two-equal">
+            <div>
+              <label htmlFor="Email Address">Email Address</label>
+              <input
+                label="Email Address"
+                placeholder="Email Address*"
+                ref={rfEmail}
+              />
+            </div>
+            <div>
+              <label htmlFor="Subject">Subject</label>
+              <input
+                label="Subject"
+                placeholder="Subject*"
+                ref={rfEmail}
+              />
+            </div>
+          </div>
+
+          <div className="message">
+            <label htmlFor="Message">Message</label>
+            <textarea cols="50" rows="2" placeholder="Message*"></textarea>
+          </div>
+
+          <div className="btn">
+            <button>Submit</button>
+          </div>
+        </div>
+        <div className="right"></div>
+      </div>
+
       <div className="MainContent">
         <div className="contactsContent">
           <div className="userMessage">

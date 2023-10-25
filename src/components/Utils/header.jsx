@@ -120,7 +120,9 @@ export default function Header(props) {
               />
               <NavLink txt="About WKWP" url="/about" active={props.active} />
             </div>
-            <div className="contactus">
+            <div className="contactus" onClick={() => {
+              window.location.href = "/contact";
+            }}>
               <p>Contact US</p>
             </div>
           </div>
