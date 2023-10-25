@@ -118,7 +118,7 @@ export default function Header(props) {
                 url="/publications"
                 active={props.active}
               />
-              <NavLink txt="About WKWP" url="/projects" active={props.active} />
+              <NavLink txt="About WKWP" url="/about" active={props.active} />
             </div>
             <div className="contactus">
               <p>Contact US</p>

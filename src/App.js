@@ -16,12 +16,18 @@ import ARC from "./Pages/ARC";
 import Terms from "./Pages/Terms";
 import Privacy from "./Pages/Privacy";
 import Projects from "./Pages/Projects";
+import About from "./Pages/About";
+
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+
+        <Route exact path="/about">
+          <About />
         </Route>
 
         <Route exact path="/portal">

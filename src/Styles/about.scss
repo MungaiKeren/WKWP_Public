@@ -1,0 +1,92 @@
+@import "./0_mediaquery";
+@import "./variables";
+
+.about-page{
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+
+    h4{
+        color: $primary;
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        span{
+            color: $secondary;
+        }
+    }
+    hr{
+        width: 90%;
+        text-align: center;
+        padding: 1px;
+        background: $primary;
+        border: $primary;
+        margin: auto;
+    }
+
+    .text-center{
+        text-align: center;
+    }
+
+    .two-equal{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        align-items: center;
+        padding: 2em 8em;
+    }
+
+    .about{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        h4{
+            text-align: left;
+        }
+        .left{
+            margin: 4em 0 8em 8em;
+            width: 100%;
+
+            p{
+                line-height: 1.7;
+                letter-spacing: 0.8px;
+            }
+        }
+
+        .right{
+            background-color: $primary;
+            width: 76%;
+            height: 76%;
+            border-radius: 0 0 0 65%;
+            background-size: cover;
+            background-position: 50%;
+            margin-left: 163px;
+
+            img{
+                width: 96%;
+                height: 96%;
+                border-radius: 0 0 0 65%;
+                background-size: cover;
+                background-position: 50%;
+                margin-left: 21px;
+            }
+        }
+    }
+    .txt{
+        h2{
+            color: $primary;
+            font-size: x-large;
+            padding: 1em 0;
+        }
+        p{
+            color: $primary;
+            text-align: justify;
+            font-size: medium;
+            line-height: 1.7;
+        }
+    }
+
+    .approach{
+        padding: 2em;
+    }
+}
