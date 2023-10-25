@@ -45,43 +45,7 @@
       padding: 2em 0 2em 0;
 
       .left {
-        border: 1px solid #60606030;
-        border-radius: 5px;
-        height: fit-content;
-        margin-top: 54px;
-
-        h3 {
-          padding: 4px;
-          color: $primary;
-        }
-
-        hr {
-          background-color: gray !important;
-        }
-
-        .category {
-          border-bottom: 1px solid #60606030;
-          cursor: pointer;
-          p {
-            color: gray;
-            padding: 5px 20px;
-          }
-        }
-        .category:hover {
-          background-color: #60606030;
-        }
-      }
-
-      .right {
-        padding: 5px;
-        height: 100%;
-
         .top {
-          display: grid;
-          grid-template-columns: 1fr auto;
-          gap: 10px;
-          margin-bottom: 10px;
-
           p {
             padding: 10px;
             margin: auto;
@@ -115,6 +79,39 @@
           }
         }
 
+        .categs{
+          border: 1px solid #60606030;
+          border-radius: 5px;
+          height: fit-content;
+          margin-top: 1em;
+        }
+
+        h3 {
+          padding: 4px;
+          color: $primary;
+        }
+
+        hr {
+          background-color: gray !important;
+        }
+
+        .category {
+          border-bottom: 1px solid #60606030;
+          cursor: pointer;
+          p {
+            color: gray;
+            padding: 5px 20px;
+          }
+        }
+        .category:hover {
+          background-color: #60606030;
+        }
+      }
+
+      .right {
+        padding: 5px;
+        height: 100%;        
+
         hr {
           color: #60606030 !important;
         }
@@ -122,10 +119,10 @@
         .pub{
           margin: 10px;
           background-color: white;
-          border-radius: 5px;
+          // border-radius: 5px;
           padding: 1em;
-          border: 1px solid #60606030;
-          box-shadow: 1px 1px 5px #60606030;
+          border-bottom: 1px solid $line;
+          // box-shadow: 1px 1px 5px #60606030;
           .stk {
             display: grid;
             grid-template-columns: 1fr 2fr;

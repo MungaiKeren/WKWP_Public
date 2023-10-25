@@ -69,53 +69,14 @@ export default function Publications(props) {
 
   return (
     <div className="publications">
-      <Header active="Publications"/>
+      <Header active="Publications" />
       <div className="slist">
         <h1>Publications: Inside Stories and Interviews</h1>
 
         <hr />
         <div className="container">
           <div className="left">
-            <Category
-              txt="All"
-              filter={filter}
-              setFilter={setFilter}
-              setCurrentPage={setCurrentPage}
-            />
-            <Category
-              txt="Donors"
-              filter={filter}
-              setFilter={setFilter}
-              setCurrentPage={setCurrentPage}
-            />
-            <Category
-              txt="Partners"
-              filter={filter}
-              setFilter={setFilter}
-              setCurrentPage={setCurrentPage}
-            />
-            <Category
-              txt="Service Providers"
-              filter={filter}
-              setFilter={setFilter}
-              setCurrentPage={setCurrentPage}
-            />
-            <Category
-              txt="NGOs"
-              filter={filter}
-              setFilter={setFilter}
-              setCurrentPage={setCurrentPage}
-            />
-            <Category
-              txt="Other"
-              filter={filter}
-              setFilter={setFilter}
-              setCurrentPage={setCurrentPage}
-            />
-          </div>
-          <div className="right">
             <div className="top">
-              <p>Search by Title</p>
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
@@ -145,6 +106,46 @@ export default function Publications(props) {
               </form>
             </div>
 
+            <div className="categs">
+              <Category
+                txt="All"
+                filter={filter}
+                setFilter={setFilter}
+                setCurrentPage={setCurrentPage}
+              />
+              <Category
+                txt="Donors"
+                filter={filter}
+                setFilter={setFilter}
+                setCurrentPage={setCurrentPage}
+              />
+              <Category
+                txt="Partners"
+                filter={filter}
+                setFilter={setFilter}
+                setCurrentPage={setCurrentPage}
+              />
+              <Category
+                txt="Service Providers"
+                filter={filter}
+                setFilter={setFilter}
+                setCurrentPage={setCurrentPage}
+              />
+              <Category
+                txt="NGOs"
+                filter={filter}
+                setFilter={setFilter}
+                setCurrentPage={setCurrentPage}
+              />
+              <Category
+                txt="Other"
+                filter={filter}
+                setFilter={setFilter}
+                setCurrentPage={setCurrentPage}
+              />
+            </div>
+          </div>
+          <div className="right">
             <div className="list">
               {data &&
                 data?.data?.length > 0 &&
