@@ -322,6 +322,68 @@
     }    
   }
 
+  .milestones{
+    padding: 4em 2em 5em 2em;
+    h4{
+      text-align: center;
+      color: $primary;
+      font-size: larger;
+      padding: 1em;
+    }
+    hr{
+      width: 18%;
+      text-align: center;
+      padding: 3px;
+      background: $secondary;
+      border: $secondary;
+      margin: auto;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .two-equal{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 1em 5em;
+      gap: 3em;
+    }
+    .item{
+      background: url("../assets/images/Rectangle\ 57.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 179px;
+      .img{
+        // height: 100px;
+      }          
+
+      .stats{
+        display: flex;
+        gap: 4em;
+        padding: 1em;
+
+        .left{
+          // text-align: center;
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          margin-left: 2em;
+          h3{
+            color: $primary;
+            font-size: xx-large;
+            font-weight: 800;
+          }
+        }
+        .right{
+          .p{
+            color: $primary;
+            font-size: large;
+            font-weight: 700;
+            margin-top: 2em;
+          }
+        }
+      }
+    }
+  }
+
+
   .impact{
     text-align: center;
     padding: 0 2em;
