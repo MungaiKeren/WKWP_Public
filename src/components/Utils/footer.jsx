@@ -18,8 +18,9 @@ const Footer = () => {
             <h3>Quick Links</h3>
             <a href="/">Home</a>
             <a href="/arc">Success Stories</a>
-            <a href="/testimonials">Publications</a>
-            <a href="/stakeholders">About WKWP</a>
+            <a href="/publications">Publications</a>
+            <a href="/about">About WKWP</a>
+            <a href="/contact">Contact Us</a>
           </div>
           <div className="sect">
             <h3>Counties</h3>

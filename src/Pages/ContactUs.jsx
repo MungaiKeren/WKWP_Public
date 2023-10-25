@@ -2,13 +2,20 @@ import React, { useRef, useState, useEffect } from "react";
 import Footer from "../components/Utils/footer";
 import "../Styles/ContactUs.scss";
 import Header from "../components/Utils/header";
+import {
+  FaXTwitter,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa6";
 
 export default function ContactUsPage(props) {
   const [isErr, setIsErr] = useState("");
   const [isLoading, setIsLoading] = useState(null);
-  const rfName = useRef();
+  const rfFName = useRef();
   const rfEmail = useRef();
-  const rfPhone = useRef();
+  const rfLName = useRef();
   const rfSubject = useRef();
   const rfContent = useRef();
 
@@ -24,8 +31,8 @@ export default function ContactUsPage(props) {
     setIsLoading(true);
     let d = body;
     d.To = rfEmail.current.value;
-    d.From = rfName.current.value;
-    d.Phone = rfPhone.current.value;
+    d.From = rfFName.current.value;
+    d.Phone = rfLName.current.value;
     d.Subject = rfSubject.current.value;
     d.Content = rfContent.current.value;
     updateBody(d);
@@ -56,9 +63,9 @@ export default function ContactUsPage(props) {
           setIsLoading(false);
           if (data.success) {
             setIsErr(data.success);
-            rfName.current.value = "";
+            rfFName.current.value = "";
             rfEmail.current.value = "";
-            rfPhone.current.value = "";
+            rfLName.current.value = "";
             rfSubject.current.value = "";
             rfContent.current.value = "";
           } else if (data.error) {
@@ -106,18 +113,15 @@ export default function ContactUsPage(props) {
         <div className="left">
           <h4>Send us a message</h4>
 
+          <p>{isErr}</p>
           <div className="two-equal">
             <div>
               <label htmlFor="First Name">First Name</label>
-              <input
-                type="text"
-                placeholder="First Name*"
-                ref={rfEmail}
-              />
+              <input type="text" placeholder="First Name*" ref={rfFName} />
             </div>
             <div>
               <label htmlFor="Last Name">Last Name</label>
-              <input label="Last Name" placeholder="Last Name*" ref={rfEmail} />
+              <input label="Last Name" placeholder="Last Name*" ref={rfLName} />
             </div>
           </div>
 
@@ -132,110 +136,56 @@ export default function ContactUsPage(props) {
             </div>
             <div>
               <label htmlFor="Subject">Subject</label>
-              <input
-                label="Subject"
-                placeholder="Subject*"
-                ref={rfEmail}
-              />
+              <input label="Subject" placeholder="Subject*" ref={rfSubject} />
             </div>
           </div>
 
           <div className="message">
             <label htmlFor="Message">Message</label>
-            <textarea cols="50" rows="2" placeholder="Message*"></textarea>
+            <textarea cols="50" rows="2" placeholder="Message*" ref={rfContent}></textarea>
           </div>
 
           <div className="btn">
-            <button>Submit</button>
+            <button onClick={postMessage}>Submit</button>
           </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <h4>Follow Us</h4>
+
+          <div className="socials">
+            <FaXTwitter color="#199EFF" size={30} />
+            <FaFacebookF color="#199EFF" size={30} />
+            <FaInstagram color="#199EFF" size={30} />
+          </div>
+        </div>
       </div>
 
-      <div className="MainContent">
-        <div className="contactsContent">
-          <div className="userMessage">
-            <div className="form">
-              <h3>Contact Us</h3>
-              <div className="input">
-                <div className="dv1">
-                  <input label="Name" placeholder="Full Name*" ref={rfName} />
-                  <input
-                    label="Email"
-                    placeholder="Email Address*"
-                    ref={rfEmail}
-                  />
-                </div>
-
-                <div className="dv2">
-                  <input
-                    label="Phone"
-                    placeholder="Phone Number*"
-                    ref={rfPhone}
-                  />
-                  <input
-                    label="Subject"
-                    placeholder="Subject*"
-                    ref={rfSubject}
-                  />
-                </div>
-
-                <div className="dv3">
-                  <textarea
-                    className="content"
-                    placeholder="Write Message*"
-                    label="Content"
-                    ref={rfContent}
-                    name="Content"
-                    id=""
-                    rows={5}
-                  ></textarea>
-                </div>
-              </div>
-              <button onClick={postMessage}>Submit</button>
-            </div>
-            <div className="message">
-              <div className="messageIcon">
-                <h3>Get in touch</h3>
-                <p>
-                  Kiri AMIS is a cutting-edge web-based platform designed to
-                  revolutionize agricultural information management. Our
-                  comprehensive system empowers farmers, researchers, and
-                  agricultural organizations with intelligent tools to enhance
-                  productivity, sustainability, and profitability in the
-                  agricultural sector.
-                </p>
-                <div className="ic1">
-                  <p>Email</p>
-                  <a href="">
-                    <i className="fa ">&#xf1fa;</i> info@kiriamis.co.ke
-                  </a>
-                </div>
-                <div className="ic2">
-                  <p>Cellphone</p>
-                  <a href="">
-                    <i className="fa ">&#xf095;</i> 0700 000 000
-                  </a>
-                </div>
-                <div className="ic3">
-                  <p>Mobile</p>
-                  <a href="">
-                    <i class="fa fa-mobile" aria-hidden="true"></i> 0700 000 000
-                  </a>
-                </div>
-                <div className="ic4">
-                  <p>Mail</p>
-                  <a href="">
-                    <i class="fa fa-envelope"></i> P.O Box 260-10304
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="more-info">
+        <div>
+          <h4>Mission Contact</h4>
+          <p>Amanda Robertson</p>
+          <p>WASH Team Lead</p>
+          <p>Cell: +254 20 862 2000</p>
+          <p>Email: arobertson@usaid.gov</p>
         </div>
-        <div className="footer">
-          <Footer />
+
+        <div>
+          <h4>Partner Contact</h4>
+          <p>Japheth Mbuvi</p>
+          <p>Chief of Party</p>
+          <p>Email: japeth_mbuvi@dai.com</p>
         </div>
+
+        <div>
+          <h4>For More information</h4>
+          <p>Email: usaidkea@usaid.gov</p>
+          <p>Website: www.usaid.gov/kenya</p>
+          <p>Facebook: USAIDKenya</p>
+          <p>Twitter: @USAIDKenya</p>
+        </div>
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );
