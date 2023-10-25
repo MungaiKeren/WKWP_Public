@@ -10,7 +10,7 @@ import ContactUs from "./Pages/ContactUs";
 import Services from "./Pages/Services";
 import NewsCreate from "./Pages/NewsCreate";
 import NewsBlog from "./Pages/NewsBlog";
-import NewsSingleInstance from "./Pages/NewsSingleInstance";
+import PublicationSingleInstance from "./Pages/PublicationSingleInstance";
 import Publications from "./Pages/Publications";
 import ARC from "./Pages/ARC";
 import Terms from "./Pages/Terms";
@@ -36,8 +36,8 @@ function App() {
           <NewsCreate />
         </Route>
 
-        <Route exact path="/news/*">
-          <NewsSingleInstance />
+        <Route exact path="/publication/*">
+          <PublicationSingleInstance />
         </Route>
 
         <Route exact path="/news">

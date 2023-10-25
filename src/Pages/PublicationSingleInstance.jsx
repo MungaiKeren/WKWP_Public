@@ -7,7 +7,7 @@ import EditNews from "../components/News/EditNews";
 import placeholder from "../assets/images/placeholder.jpg";
 import Footer from "../components/Utils/footer";
 
-export default function NewsSingleInstance(props) {
+export default function PublicationSingleInstance(props) {
   const [data, setData] = useState(null);
   const [refresh, setRefresh] = useState();
 
@@ -26,7 +26,7 @@ export default function NewsSingleInstance(props) {
 
   return (
     <div className="listnews">
-      <Header />
+      <Header active="Publications" />
       <div className="singleInstance">
         {data && (
           <div className="container">

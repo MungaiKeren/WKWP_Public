@@ -61,11 +61,21 @@ const Footer = () => {
 
         <div className="bottom">
           <img src={usaid_logo} alt="" />
-          <p>
-            &copy; {new Date().getFullYear()} WKWP. All rights reserved.
+          <p>&copy; {new Date().getFullYear()} WKWP. All rights reserved.</p>
+          <p
+            onClick={() => {
+              window.location.href = "/terms";
+            }}
+          >
+            Terms and Conditions
           </p>
-          <p>Terms and Conditions</p>
-          <p>Privacy Policy</p>
+          <p
+            onClick={() => {
+              window.location.href = "/privacy";
+            }}
+          >
+            Privacy Policy
+          </p>
 
           <img src={wkwp_logo} alt="" />
         </div>

@@ -185,7 +185,6 @@ const Category = (props) => {
 
 const Stakeholder = (props) => {
   return (
-
     <div className="pub">
       <div className="stk">
         <div className="lft">
@@ -197,7 +196,10 @@ const Stakeholder = (props) => {
         </div>
       </div>
       <div className="more">
-        <a href="#" className="btn">
+        <a
+          href="/publication/70e7e3fa-8a9e-41b5-a306-a86315603685"
+          className="btn"
+        >
           Read More &nbsp;&nbsp;
           <FaArrowRightLong />
         </a>
