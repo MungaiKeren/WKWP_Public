@@ -31,8 +31,21 @@ export default function HeroSection(props) {
               </h2>
 
               <div className="portals">
-                <button className="dashboard">Dashboard</button>
-                <button className="KMI">
+                <button
+                  className="dashboard"
+                  onClick={() => {
+                    window.location.href =
+                      "https://dashboard-melmis.dat.co.ke/";
+                  }}
+                >
+                  Dashboard
+                </button>
+                <button
+                  className="KMI"
+                  onClick={() => {
+                    window.location.href = "https://kmi-melmis.dat.co.ke/";
+                  }}
+                >
                   Knowledge Management Information
                 </button>
               </div>

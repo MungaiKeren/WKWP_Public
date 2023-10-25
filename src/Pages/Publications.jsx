@@ -1,13 +1,12 @@
 import "../Styles/publications.scss";
 import { useEffect, useState } from "react";
 import Header from "../components/Utils/header";
-import BlogPost from "../components/News/BlogPost";
-import Hero from "../components/Home/Hero";
 import Footer from "../components/Utils/footer";
-import logo from "../assets/images/wb.png";
 import { useRef } from "react";
 import Pagination from "../components/Utils/Pagination";
 import WaveLoading from "../components/Utils/WaveLoading";
+import {FaArrowRightLong} from "react-icons/fa6";
+import image from "../assets/images/woman carrying water.png";
 
 export default function Publications(props) {
   const [data, setData] = useState(null);
@@ -69,10 +68,12 @@ export default function Publications(props) {
   }
 
   return (
-    <div className="stakeholders">
-      <Header />
+    <div className="publications">
+      <Header active="Publications"/>
       <div className="slist">
         <h1>Publications: Inside Stories and Interviews</h1>
+
+        <hr />
         <div className="container">
           <div className="left">
             <Category
@@ -183,17 +184,25 @@ const Category = (props) => {
 
 const Stakeholder = (props) => {
   return (
-    <div className="stk">
-      <div className="tp">
-        <img src={"/api/" + props.item.Image.replaceAll("\\", "/")} alt="" />
-        <h3>{props.item.Title}</h3>
+
+    <div className="pub">
+      <div className="stk">
+        <div className="lft">
+          <img src={image} alt="" />
+        </div>
+        <div className="rght">
+          <h3>{props.item.Title}</h3>
+          <p>{props.item.Description.substring(0, 500)}</p>
+        </div>
       </div>
-      <br />
-      <p>{props.item.Description}</p>
-      <p>Category: {props.item.Type}</p>
-      <a title="Visit Website" href={props.item.Link}>
-        <i className="fa fa-globe"></i>
-      </a>
+      <div className="more">
+        <a href="#" className="btn">
+          Read More &nbsp;&nbsp;
+          <FaArrowRightLong />
+        </a>
+      </div>
     </div>
   );
 };
+
+// "/api/" + props.item.Image.replaceAll("\\", "/")
