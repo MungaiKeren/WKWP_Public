@@ -6,7 +6,6 @@ import { useRef } from "react";
 import Pagination from "../components/Utils/Pagination";
 import WaveLoading from "../components/Utils/WaveLoading";
 import { FiDownload } from "react-icons/fi";
-import image from "../assets/images/woman carrying water.png";
 
 export default function Publications(props) {
   const [data, setData] = useState(null);
@@ -21,7 +20,7 @@ export default function Publications(props) {
   useEffect(() => {
     if (filter == "All") {
       setLoading(true);
-      fetch(`/api/stakeholders/paginated/${(currentPage - 1) * 12}`)
+      fetch(`/api/publications/paginated/${(currentPage - 1) * 12}`)
         .then((res) => {
           if (res.ok) return res.json();
           else throw Error("");
@@ -36,7 +35,7 @@ export default function Publications(props) {
         });
     } else {
       setLoading(true);
-      fetch(`/api/stakeholders/type/${filter}/${(currentPage - 1) * 12}`)
+      fetch(`/api/publications/type/${filter}/${(currentPage - 1) * 12}`)
         .then((res) => {
           if (res.ok) return res.json();
           else throw Error("");
@@ -53,7 +52,7 @@ export default function Publications(props) {
 
   function search(q) {
     setLoading(true);
-    fetch(`/api/stakeholders/search/${q}`)
+    fetch(`/api/publications/search/${q}/${(currentPage - 1) * 12}`)
       .then((res) => {
         if (res.ok) return res.json();
         else throw Error("");
@@ -194,7 +193,7 @@ const Stakeholder = (props) => {
     <div className="pub">
       <div className="stk">
         <div className="lft">
-          <img src={image} alt="" />
+          <img src={"/api/uploads/" + props.item.File.replaceAll("\\", "/")} alt="" />
         </div>
         <div className="rght">
           <h3>{props.item.Title}</h3>
@@ -202,10 +201,7 @@ const Stakeholder = (props) => {
         </div>
       </div>
       <div className="more">
-        <a
-          href="#"
-          className="btn"
-        >
+        <a href="#" className="btn">
           Download PDF &nbsp;&nbsp;
           <FiDownload />
         </a>

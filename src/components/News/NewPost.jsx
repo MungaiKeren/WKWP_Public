@@ -13,17 +13,17 @@ export default function NewPost(props) {
   const type = useRef();
   const description = useRef();
   const keywords = useRef();
-  const link = useRef();
+  let date = new Date();
 
   const createNews = () => {
-    console.log(description);
+    console.log("description");
     const body = {
       Title: title.current.getValue(),
-      Image: image.current.files[0],
+      File: image.current.files[0],
       Type: type.current.getValue(),
       Description: description.current.value,
       Keywords: keywords.current.getValue(),
-      Link: link.current.getValue(),
+      Date: date,
     };
     setLoading(true);
     setError("");
@@ -55,12 +55,6 @@ export default function NewPost(props) {
         setLoading(false);
         return result;
       }
-      if (!body.Link) {
-        result = false;
-        setError("Link is required!");
-        setLoading(false);
-        return result;
-      }
       return result;
     };
 
@@ -71,7 +65,7 @@ export default function NewPost(props) {
         formData.append(i, body[i]);
       }
 
-      fetch(`/api/news/create`, {
+      fetch(`/publications/create`, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -125,7 +119,7 @@ export default function NewPost(props) {
               ref={type}
               label="Category "
               required=" *"
-              data={["Extension Services", "Farming", "Others"]}
+              data={["Urban Water Services", "Rural Water Services", "Water Resources Management", "Finance & Private Sector", "Policy & Governance", "Other"]}
             />
             <div className="input">
               <h4>
@@ -144,7 +138,6 @@ export default function NewPost(props) {
               label="Keywords "
               required=" *"
             />
-            <UserInput ref={link} type="text" label="Link " required=" *" />
             <h6>{error}</h6>
             <Button handleClick={createNews} value="Submit" required=" *" />
           </form>
