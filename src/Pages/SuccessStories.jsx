@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "../Styles/success.scss";
 import Header from "../components/Utils/header";
 import Footer from "../components/Utils/footer";
@@ -9,7 +9,37 @@ import Partners from "../components/Home/Partners";
 import Testimonials from "../components/Success/Testimonials";
 import FeaturedProfiles from "../components/Success/FeaturedProfiles";
 
+
+const YouTubePopup = ({ videoId, onClose }) => {
+  return (
+    <div className="youtube-popup">
+      <div className="popup-content">
+        <button className="close-button" onClick={onClose}>
+          Close
+        </button>
+        <iframe
+          width="560"
+          height="315"
+          src={`https://www.youtube.com/embed/1cz-quNS3n8?si=qUNhy6wdPAiY5lDI`}
+          title="YouTube Video"
+          frameBorder="0"
+          allowFullScreen
+        />
+      </div>
+    </div>
+  );
+};
+
 export default function SuccessStories() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
   return (
     <div className="success">
       <Header active="Success Stories" />
@@ -28,11 +58,17 @@ export default function SuccessStories() {
           Success <span>Stories</span>
         </h4>
 
+        {isPopupOpen && <YouTubePopup onClose={closePopup} />}
         <div className="two-equal">
           <div className="imgs">
             <img src={story} className="main-img" alt="" />
             <div className="icn">
-              <img src={play} className="play-icon" alt="" />
+              <img
+                src={play}
+                onClick={openPopup}
+                className="play-icon"
+                alt=""
+              />
             </div>
           </div>
           <div className="right">
@@ -49,7 +85,7 @@ export default function SuccessStories() {
             </p>
 
             <div className="btn">
-              <button>Play Video</button>
+              <button onClick={openPopup}>Play Video</button>
             </div>
           </div>
         </div>

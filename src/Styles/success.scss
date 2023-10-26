@@ -40,6 +40,37 @@
 
     .vids{
         padding: 2em 4em;
+
+        .youtube-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            // background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 50%;
+            right: 20%;
+            background: none;
+            border: none;
+            color: white;
+            font-size: large;
+            cursor: pointer;
+        }
+
         h4{
             color: $primary;
             font-size: 40px;
