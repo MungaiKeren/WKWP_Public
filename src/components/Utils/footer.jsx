@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="sect">
             <h3>Quick Links</h3>
             <a href="/">Home</a>
-            <a href="/arc">Success Stories</a>
+            <a href="/success">Success Stories</a>
             <a href="/publications">Publications</a>
             <a href="/about">About WKWP</a>
             <a href="/contact">Contact Us</a>

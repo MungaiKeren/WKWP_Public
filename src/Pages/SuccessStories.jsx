@@ -74,14 +74,15 @@ export default function SuccessStories() {
           <div className="right">
             <h5>Data Collection from beneficiaries</h5>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book.
+              In the remote village of Bonde, plagued by waterborne
+              diseases and water scarcity, the Water for Life NGO spearheaded a
+              transformative project. By drilling a borehole, installing a
+              network of pipes, and engaging the community in hygiene and water
+              management education, the NGO provided accessible clean water.
+              This endeavor drastically reduced disease incidences, empowered
+              the community, improved school attendance, and enhanced overall
+              quality of life, showcasing the profound impact of clean water
+              access on transforming lives and entire communities.
             </p>
 
             <div className="btn">
