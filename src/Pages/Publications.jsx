@@ -5,7 +5,7 @@ import Footer from "../components/Utils/footer";
 import { useRef } from "react";
 import Pagination from "../components/Utils/Pagination";
 import WaveLoading from "../components/Utils/WaveLoading";
-import {FaArrowRightLong} from "react-icons/fa6";
+import { FiDownload } from "react-icons/fi";
 import image from "../assets/images/woman carrying water.png";
 
 export default function Publications(props) {
@@ -197,11 +197,11 @@ const Stakeholder = (props) => {
       </div>
       <div className="more">
         <a
-          href="/publication/70e7e3fa-8a9e-41b5-a306-a86315603685"
+          href="#"
           className="btn"
         >
-          Read More &nbsp;&nbsp;
-          <FaArrowRightLong />
+          Download PDF &nbsp;&nbsp;
+          <FiDownload />
         </a>
       </div>
     </div>
