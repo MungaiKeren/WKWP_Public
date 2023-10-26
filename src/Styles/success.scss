@@ -21,15 +21,6 @@
             width: 100%;
             object-fit: cover;
         }
-        .overlay{
-            height: 26vh;
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.2);
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-        }
         .content{
             position: absolute;
             top: 0;
@@ -39,11 +30,116 @@
             background-color: rgba(0, 0, 0, 0.3);
             padding: 2em;
             color: white;
-            // transform: translateY(50px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
             h4{
                 color: white;
                 text-align: center;
+                margin-top: 10em;
+            }
+        }
+    }
+
+    .vids{
+        padding: 2em 4em;
+        h4{
+            color: $primary;
+            font-size: 40px;
+            font-weight: 600;
+            text-align: center;
+            span{
+                color: $secondary;
+            }
+        }
+
+        .two-equal{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 2em 6em;
+            max-height: 72vh;
+            // gap: 2em;
+
+            .imgs{
+                .main-img{
+                    height: 60%;
+                    // width: auto;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                .play-icon{
+                    height: 100px;
+                    width: 100px;
+                    margin: auto;
+                }
+            }
+            .right{
+                padding: 2em 0;
+                h5{
+                    font-size: larger;
+                    padding: 5px;                    
+                }
+
+                p{
+                    font-size: medium;
+                    width: 100%;
+                    padding: 5px;
+                    line-height: 2;
+                    word-spacing: 10px;
+                }
+                button{
+                    cursor: pointer;
+                    background-color: $secondary;
+                    color: white;
+                    border: none;
+                    padding: 10px;
+                    border-radius: 5px;
+                    width: 27%;
+                    text-align: center;
+                }
+                button:hover{
+                    background-color: red;
+                }
+            }
+        }
+    }
+
+    .partners {
+        padding: 2em 0;
+        background-color: $primary;
+        color: white;
+
+        .container {
+            max-width: 85%;
+            width: 100%;
+            margin: auto;
+
+            h1 {
+                color: white;
+                font-size: x-large;
+                margin: 10px 0 10px 0;
+                text-align: center;
+            }
+
+            img {
+                max-height: 250px;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+
+            .slideshow-container {
+                overflow: hidden;
+                width: 100%;
+                margin: 1em 0 1em 0;
+            }
+
+            .slideshow-track {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+
+            .slideshow-slide {
+                flex-shrink: 0;
+                width: 100%;
+                height: auto;
             }
         }
     }

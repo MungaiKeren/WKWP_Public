@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
-import kr from "../../assets/images/logo.png";
-import narigp from "../../assets/images/narigp.png";
-import wb from "../../assets/images/wb.png";
-import ke from "../../assets/images/kenya.png";
+import usaid from "../../assets/images/usaid_logo.png";
+import wkwp from "../../assets/images/wkwp_logo.png";
+import dai from "../../assets/images/DAI-logo.png";
 import osl from "../../assets/images/osl.png";
+
+
 export default function Partners(props) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [kr, narigp, wb, ke, osl];
+  const images = [usaid, wkwp, dai, osl];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,8 +20,7 @@ export default function Partners(props) {
   return (
     <div className="partners">
       <div className="container">
-        <h3>Who we work with</h3>
-        <h1>Partners</h1>
+        <h1>Our Partners</h1>
         <div className="slideshow-container">
           <div
             className="slideshow-track"
