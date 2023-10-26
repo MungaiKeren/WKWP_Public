@@ -6,8 +6,6 @@ import {
   FaXTwitter,
   FaFacebookF,
   FaInstagram,
-  FaLinkedin,
-  FaYoutube,
 } from "react-icons/fa6";
 
 export default function ContactUsPage(props) {
@@ -44,7 +42,7 @@ export default function ContactUsPage(props) {
       return setIsErr("Message can not be blank!");
 
     if (validateEmail(body.To) && validateMessage(body.Content)) {
-      fetch("/messages/post", {
+      fetch("/api/messages/post", {
         method: "POST",
         credentials: "include",
         headers: {

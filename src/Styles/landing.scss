@@ -204,15 +204,6 @@
       width: 100%;
       object-fit: cover;
     }
-    .overlay{
-      height: 75vh;
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0.2);
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-    }
     .content{
       position: absolute;
       top: 0;
@@ -221,7 +212,7 @@
       height: 100%;
       display: flex;
       align-items: center;
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.5);
       padding: 2em;
       color: white;
       // transform: translateY(50px);
@@ -350,7 +341,7 @@
       background: url("../assets/images/Rectangle\ 57.png");
       background-repeat: no-repeat;
       background-size: cover;
-      height: 179px;
+      height: 191px;
       .img{
         // height: 100px;
       }          

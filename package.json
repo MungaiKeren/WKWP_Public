@@ -2,7 +2,7 @@
   "name": "mfp-frnt",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://185.215.180.181:7705",
+  "proxy": "http://185.215.180.181:9334",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@material-ui/core": "^4.12.4",

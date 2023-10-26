@@ -7,7 +7,6 @@ export default function HeroSection(props) {
     return (
       <div className="hero-section">
         <img src={img} alt="" />
-        <div className="overlay"></div>
         <div className="content">
           <div className="row">
             <div className="left">

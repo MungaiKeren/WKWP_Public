@@ -114,25 +114,31 @@ export default function Publications(props) {
                 setCurrentPage={setCurrentPage}
               />
               <Category
-                txt="Donors"
+                txt="Urban Water Services"
                 filter={filter}
                 setFilter={setFilter}
                 setCurrentPage={setCurrentPage}
               />
               <Category
-                txt="Partners"
+                txt="Rural water Services"
                 filter={filter}
                 setFilter={setFilter}
                 setCurrentPage={setCurrentPage}
               />
               <Category
-                txt="Service Providers"
+                txt="Water Resources Management"
                 filter={filter}
                 setFilter={setFilter}
                 setCurrentPage={setCurrentPage}
               />
               <Category
-                txt="NGOs"
+                txt="Finance & Private Sector"
+                filter={filter}
+                setFilter={setFilter}
+                setCurrentPage={setCurrentPage}
+              />
+              <Category
+                txt="Policy & Governance"
                 filter={filter}
                 setFilter={setFilter}
                 setCurrentPage={setCurrentPage}
