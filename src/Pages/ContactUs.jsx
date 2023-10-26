@@ -18,7 +18,8 @@ export default function ContactUsPage(props) {
   const rfContent = useRef();
 
   const [body, updateBody] = useState({
-    To: "",
+    To: "kmungai@osl.co.ke",
+    Email: "",
     From: "",
     Phone: "",
     Subject: "",
@@ -28,7 +29,7 @@ export default function ContactUsPage(props) {
   const postMessage = () => {
     setIsLoading(true);
     let d = body;
-    d.To = rfEmail.current.value;
+    d.Email = rfEmail.current.value;
     d.From = rfFName.current.value;
     d.Phone = rfLName.current.value;
     d.Subject = rfSubject.current.value;
@@ -36,12 +37,13 @@ export default function ContactUsPage(props) {
     updateBody(d);
     setIsErr("");
 
-    if (!validateEmail(body.To))
+    if (!validateEmail(body.Email))
       return setIsErr("Please enter a valid email address!");
     if (!validateMessage(body.Content))
       return setIsErr("Message can not be blank!");
 
-    if (validateEmail(body.To) && validateMessage(body.Content)) {
+    if (validateEmail(body.Email) && validateMessage(body.Content)) {
+      console.log(body);
       fetch("/api/messages/post", {
         method: "POST",
         credentials: "include",
@@ -67,6 +69,7 @@ export default function ContactUsPage(props) {
             rfSubject.current.value = "";
             rfContent.current.value = "";
           } else if (data.error) {
+            console.log(data.error);
             setIsErr(data.error);
           } else setIsErr("Oops! Something went wrong!");
         })
