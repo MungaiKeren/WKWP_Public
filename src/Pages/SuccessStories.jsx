@@ -60,7 +60,7 @@ export default function SuccessStories() {
 
         {isPopupOpen && <YouTubePopup onClose={closePopup} />}
         <div className="two-equal">
-          <div className="imgs">
+          {/* <div className="imgs">
             <img src={story} className="main-img" alt="" />
             <div className="icn">
               <img
@@ -70,12 +70,16 @@ export default function SuccessStories() {
                 alt=""
               />
             </div>
+          </div> */}
+          <div className="left">
+            <img src={story} className="main-img" alt="" />
+            <img src={play} onClick={openPopup} className="play-icon" alt="" />
           </div>
           <div className="right">
             <h5>Data Collection from beneficiaries</h5>
             <p>
-              In the remote village of Bonde, plagued by waterborne
-              diseases and water scarcity, the Water for Life NGO spearheaded a
+              In the remote village of Bonde, plagued by waterborne diseases and
+              water scarcity, the Water for Life NGO spearheaded a
               transformative project. By drilling a borehole, installing a
               network of pipes, and engaging the community in hygiene and water
               management education, the NGO provided accessible clean water.

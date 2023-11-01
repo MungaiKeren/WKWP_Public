@@ -84,31 +84,30 @@
         .two-equal{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            padding: 2em 6em;
-            max-height: 72vh;
-            // gap: 2em;
+            padding: 2em 4em;
+            gap: 2em;
 
-            .imgs{
-                text-align: center;
+            .left{
+                background-color: #D9D9D9;
+                width: 100%;
+                position: relative;
                 .main-img{
-                    height: 60%;
-                    // width: auto;
+                    height: 100%;
+                    width: 100%;
                     object-fit: cover;
                     object-position: center;
                 }
-
-                .icn{
+                .play-icon{
                     position: absolute;
-                    top: 109%;
-                    left: 27%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 150px;
+                    width: 150px;
                     cursor: pointer;
-                    
-                    img{
-                        height: 100px;
-                        width: 100px;
-                    }
                 }
             }
+
             .right{
                 padding: 2em 0;
                 h5{

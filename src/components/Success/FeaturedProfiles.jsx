@@ -20,7 +20,7 @@ const FeaturedProfiles = () => {
         />
         <Profile
           text="But this project's success is not solely our achievement. It is the result of a collective effort involving the community members, local leaders, our dedicated team, and the generous support of our donors. It's a testament to what can be accomplished when we work together toward a common goal."
-          name="Japheth Mbuvi"
+          name="Mutisya Mulanga"
           role="MEL Lead"
         />
         <Profile
