@@ -341,10 +341,7 @@
       background: url("../assets/images/Rectangle\ 57.png");
       background-repeat: no-repeat;
       background-size: contain;
-      height: 191px;
-      .img{
-        // height: 100px;
-      }          
+      height: 191px;      
 
       .stats{
         display: flex;
@@ -352,7 +349,6 @@
         padding: 1em;
 
         .left{
-          // text-align: center;
           display: grid;
           grid-template-rows: 1fr 1fr;
           margin-left: 2em;
