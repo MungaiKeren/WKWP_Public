@@ -60,17 +60,6 @@ export default function SuccessStories() {
 
         {isPopupOpen && <YouTubePopup onClose={closePopup} />}
         <div className="two-equal">
-          {/* <div className="imgs">
-            <img src={story} className="main-img" alt="" />
-            <div className="icn">
-              <img
-                src={play}
-                onClick={openPopup}
-                className="play-icon"
-                alt=""
-              />
-            </div>
-          </div> */}
           <div className="left">
             <img src={story} className="main-img" alt="" />
             <img src={play} onClick={openPopup} className="play-icon" alt="" />
