@@ -9,57 +9,59 @@ const Terms = () => {
       <Header />
       <div className="tnc">
         <div className="container">
-          <h1>Terms and Conditions</h1>
+          <h1>Western Kenya Water Project Terms and Conditions</h1>
+
+          <h2>1. Acceptance of Terms and Conditions</h2>
           <p>
-            Welcome to the Kirinyaga Agricultural Management Information System
-            (KiriAMIS). These terms and conditions outline the rules and
-            regulations for the use of KiriAMIS.
+            By participating in or benefiting from the Western Kenya Water
+            Project (the "Project"), you agree to comply with these Terms and
+            Conditions. If you do not agree with these terms, please do not
+            engage with the Project.
           </p>
 
-          <h2>1. Acceptance of Terms</h2>
+          <h2>2. Project Overview</h2>
           <p>
-            By accessing or using KiriAMIS, you agree to be bound by these terms
-            and conditions. If you do not agree with any part of these terms,
-            you should not use KiriAMIS.
+            The Western Kenya Water Project aims to improve access to clean and
+            safe water in Western Kenya. The project is funded by USAID and
+            implemented by DAI Global LLC. The project involves various
+            activities, including but not limited to infrastructure development,
+            community engagement, and data collection.
           </p>
 
-          <h2>2. Intellectual Property</h2>
+          <h2>3. Eligibility</h2>
           <p>
-            The content and materials on KiriAMIS are the property of Kirinyaga
-            Agricultural Management Information System or its licensors and are
-            protected by intellectual property laws. You may not use, modify, or
-            distribute the content without prior written permission.
+            Participation in the Project is open to individuals, organizations,
+            and entities that meet the eligibility criteria established by
+            USAID, DAI Global LLC, and other relevant stakeholders.
           </p>
 
-          <h2>3. User Conduct</h2>
+          <h2>4. Data Collection and Privacy</h2>
           <p>
-            You agree to use KiriAMIS in a manner consistent with applicable
-            laws and regulations and in accordance with these terms and
-            conditions. You are solely responsible for any content you submit or
-            transmit through KiriAMIS.
+            4.1. By participating in the Project, you consent to the collection
+            and use of your personal information in accordance with the
+            Project's Privacy Policy. Please refer to the Privacy Policy for
+            more details on data collection and protection.
           </p>
 
-          <h2>4. Privacy Policy</h2>
+          <h2>5. Intellectual Property Rights</h2>
           <p>
-            Your use of KiriAMIS is subject to our Privacy Policy. By using
-            KiriAMIS, you consent to the collection, use, and disclosure of your
-            information as described in the Privacy Policy.
+            5.1. All intellectual property rights related to the Project,
+            including but not limited to patents, copyrights, trademarks, and
+            trade secrets, are the property of their respective owners. You
+            agree not to infringe upon these rights.
           </p>
 
-          <h2>5. Limitation of Liability</h2>
+          <h2>6. Changes to the Privacy Policy</h2>
           <p>
-            Kirinyaga Agricultural Management Information System, its directors,
-            employees, or affiliates shall not be liable for any direct,
-            indirect, incidental, consequential, or punitive damages arising out
-            of or in connection with the use of KiriAMIS.
+            We may update this Privacy Policy from time to time. Any changes
+            will be effective upon posting the revised Privacy Policy on this
+            page. We encourage you to review this Privacy Policy periodically.
           </p>
 
-          <h2>6. Governing Law and Jurisdiction</h2>
+          <h2>7. Contact Us</h2>
           <p>
-            These terms and conditions shall be governed by and construed in
-            accordance with the laws of Kenya. Any disputes arising out of or in
-            connection with these terms shall be subject to the exclusive
-            jurisdiction of the courts of Kenya.
+            If you have any questions or concerns regarding this Privacy Policy,
+            please contact us at [contact information].
           </p>
         </div>
       </div>

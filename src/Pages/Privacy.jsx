@@ -9,49 +9,45 @@ const Privacy = () => {
       <Header />
       <div className="tnc">
         <div className="container">
-          <h1>Privacy Policy</h1>
+          <h1>Western Kenya Water Project Privacy Policy</h1>
+
+          <h2>1. Acceptance of Privacy Policy</h2>
           <p>
-            This Privacy Policy describes how your personal information is
-            collected, used, and shared when you use the Kirinyaga Agricultural
-            Management Information System (KiriAMIS).
+            By participating in or benefiting from the Western Kenya Water
+            Project (the "Project"), you agree to comply with these Privacy policy. If you do not agree with these terms, please do not
+            engage with the Project.
           </p>
 
-          <h2>1. Information We Collect</h2>
+          <h2>2. Project Overview</h2>
           <p>
-            We collect personal information that you provide to us when using
-            KiriAMIS, including your name, email address, and contact
-            information.
+            The Western Kenya Water Project aims to improve access to clean and
+            safe water in Western Kenya. The project is funded by USAID and
+            implemented by DAI Global LLC. The project involves various
+            activities, including but not limited to infrastructure development,
+            community engagement, and data collection.
           </p>
 
-          <h2>2. Use of Information</h2>
+          <h2>3. Eligibility</h2>
           <p>
-            We use the collected information to provide and improve KiriAMIS,
-            communicate with you, and personalize your experience. We may also
-            use the information to send you important updates or promotional
-            materials.
+            Participation in the Project is open to individuals, organizations,
+            and entities that meet the eligibility criteria established by
+            USAID, DAI Global LLC, and other relevant stakeholders.
           </p>
 
-          <h2>3. Data Retention</h2>
+          <h2>4. Data Collection and Privacy</h2>
           <p>
-            We retain your personal information for as long as necessary to
-            fulfill the purposes outlined in this Privacy Policy, unless a
-            longer retention period is required or permitted by law.
+            4.1. By participating in the Project, you consent to the collection
+            and use of your personal information in accordance with the
+            Project's Privacy Policy. Please refer to the Privacy Policy for
+            more details on data collection and protection.
           </p>
 
-          <h2>4. Data Security</h2>
+          <h2>5. Intellectual Property Rights</h2>
           <p>
-            We implement appropriate security measures to protect your personal
-            information from unauthorized access, disclosure, alteration, or
-            destruction. However, please note that no method of transmission
-            over the internet or electronic storage is completely secure.
-          </p>
-
-          <h2>5. Third-Party Services</h2>
-          <p>
-            We may share your personal information with third-party service
-            providers to assist us in operating KiriAMIS and delivering the
-            requested services. These third parties are required to protect your
-            information and only use it for the purposes specified by us.
+            5.1. All intellectual property rights related to the Project,
+            including but not limited to patents, copyrights, trademarks, and
+            trade secrets, are the property of their respective owners. You
+            agree not to infringe upon these rights.
           </p>
 
           <h2>6. Changes to the Privacy Policy</h2>
