@@ -1,6 +1,8 @@
 import "../../Styles/_header.scss";
 import React from "react";
 import logo2 from "../../assets/images/logo.png";
+import usaidLogo from "../../assets/images/usaid_logo.png";
+import wkwpLogo from "../../assets/images/wkwp_logo.png";
 import { useLocation } from "react-router-dom";
 
 function NavLink(props) {
@@ -48,28 +50,22 @@ export default function ModalHeader(props) {
             }}
             className="logo"
           >
-            <img src={logo2} alt="Oakar Services Ltd Logo" />
-            <h2>KiriAMIS</h2>
+            <img src={usaidLogo} alt="Oakar Services Ltd Logo" />
+            <img src={wkwpLogo} alt="" />
           </div>
         </div>
 
         <h3>Menus</h3>
         <div className="nav">
           <NavLink txt="Home" url="/" active={props.active} />
-          <NavLink txt="Portals" url="/portal" active={props.active} />
+          <NavLink txt="Success Stories" url="/success" active={props.active} />
 
           <NavLink
-            txt="Stakeholders"
-            url="/stakeholders"
+            txt="Publications"
+            url="/publications"
             active={props.active}
           />
-          <NavLink txt="Resource Center" url="/arc" active={props.active} />
-          <NavLink txt="News" url="/news" active={props.active} />
-          <NavLink
-            txt="Testimonials"
-            url="/testimonials"
-            active={props.active}
-          />
+          <NavLink txt="About WKWP" url="/about" active={props.active} />
           <NavLink txt="Contact Us" url="/contact" active={props.active} />
         </div>
         <i

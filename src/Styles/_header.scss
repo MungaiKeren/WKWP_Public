@@ -171,7 +171,7 @@
         font-size: large;
         width: fit-content;
         text-align: center;
-        color: $primary;
+        color: $white;
         margin: auto 0 auto auto;
         display: block;
         height: 30px;
@@ -206,12 +206,13 @@
 
   @include maxwidth(mobile) {
     .contacts {
-      padding-left: 1em;
       .container {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
 
-        a {
-          display: none !important;
+        div{
+          img{
+            max-height: 40px;
+          }
         }
       }
     }
@@ -226,7 +227,7 @@
     .contacts {
       padding-left: 1em;
       .container {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
 
         a {
           display: none !important;
@@ -253,11 +254,17 @@
   z-index: 99999;
   .container {
     .itemsLogo {
-      background-color: #eee2de;
+      background-color: $primary;
       padding: 2em;
 
+      .logo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+      }
+
       img {
-        max-height: 100px;
+        max-height: 40px;
         height: 100%;
         display: block;
         margin: auto;
