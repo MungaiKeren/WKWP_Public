@@ -252,6 +252,9 @@
   background-color: white;
   color: $primary;
   z-index: 99999;
+  height: fit-content;
+  animation: slide-right;
+  animation-duration: 2s;
   .container {
     .itemsLogo {
       background-color: $primary;
@@ -308,5 +311,14 @@
       padding: 5px;
       margin-left: 2em;
     }
+  }
+}
+
+@keyframes slide-right{
+  10% {
+    left: 100px
+  }
+  50% {
+    right: 0;
   }
 }

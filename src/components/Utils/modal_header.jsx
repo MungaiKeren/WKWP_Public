@@ -1,6 +1,5 @@
 import "../../Styles/_header.scss";
 import React from "react";
-import logo2 from "../../assets/images/logo.png";
 import usaidLogo from "../../assets/images/usaid_logo.png";
 import wkwpLogo from "../../assets/images/wkwp_logo.png";
 import { useLocation } from "react-router-dom";
