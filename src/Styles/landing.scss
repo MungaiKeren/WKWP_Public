@@ -392,8 +392,8 @@
     .content{
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3em;
-      padding: 4em 5em;
+      gap: 1em;
+      padding: 4em 0 4em 0;
       .left, .right{
         display: grid;
         grid-template-rows: auto auto;

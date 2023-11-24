@@ -52,8 +52,7 @@
   }
 
   hr{
-    width: 90vw;
-    margin-left: -46px;
+    margin: auto;
   }
   .bottom{
     display: grid;
@@ -70,10 +69,22 @@
     .sections {
       grid-template-columns: 1fr !important;
     }
+    .bottom{
+      grid-template-columns: 1fr;
+      padding-bottom: 1em;
+      img{
+        width: auto;
+        margin: auto;
+      }
+    }
   }
   @include maxwidth(tablet) {
     .sections {
       grid-template-columns: 1fr 1fr !important;
+    }
+    .bottom{
+      grid-template-columns: repeat(4, 1fr);
+      padding-bottom: 1em;
     }
   }
 }
