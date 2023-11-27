@@ -192,17 +192,15 @@
 
   .hero-section{
     width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100%;
     position: relative;
     transition: opacity 0.5s ease-in-out;
 
     img{
-      max-height: 100%;
       height: 100%;
       width: 100%;
       object-fit: cover;
+      object-position: center;
     }
     .content{
       position: absolute;
@@ -284,21 +282,21 @@
       h4{
         color: #FFF;
         font-size: x-large;
-        margin-left: 4em;
-        margin-bottom: 10px;
+        text-align: center;
       }
       hr{
-        width: 53%;
+        // width: 53%;
+        margin: auto;
         text-align: center;
         padding: 3px;
         background: $secondary;
         border: $secondary;
-        margin-left: 46px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
       }
 
       .two-equal{
         margin-top: 1em;
+        text-align: center;
         display: grid;
         grid-template-columns: 1fr 1fr;
         p{
@@ -308,6 +306,7 @@
           font-weight: 600;
           line-height: normal;
           padding: 1em 0;
+          text-align: left;
         }
       }
     }    
@@ -906,6 +905,40 @@
         grid-template-columns: 1fr 1fr !important;
       }
     }
+  }
+
+  @include maxwidth(mobile) {
+    .content{
+      .row{
+        max-width: 100% !important;
+        display: block !important;
+        .left{
+          display: none !important;
+        }
+      }
+      .portals{
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          gap: 1em;
+          .KMI{
+            margin-left: 0 !important;
+          }
+      }
+    }
+    .counties{
+      grid-template-columns: 1fr;
+    }
+    .impact{
+      .content{
+        grid-template-columns: 1fr;
+      }
+      hr{
+        width: 100%;
+      }
+    }
+  }
+  @include maxwidth(tablet) {
+    
   }
 }
 
