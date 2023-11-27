@@ -913,7 +913,7 @@
         max-width: 100% !important;
         display: block !important;
         .left{
-          display: none !important;
+          display: none !important;          
         }
       }
       .portals{
@@ -928,9 +928,50 @@
     .counties{
       grid-template-columns: 1fr;
     }
+    .milestones{
+      padding: 0 1em;
+      hr{
+        width: 100%;
+      }
+      .two-equal{
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 1em 0;
+      }
+      .item{
+        height: 125px;
+        .stats{
+          gap: 1em;
+          .left{
+            margin-left: 0 !important;
+            img{
+              display: none;
+            }
+          }
+          .right{
+            .p{
+              display: block;
+              margin-top: 1em;
+              font-size: medium;
+              font-weight: 500;
+            }
+            p{
+              display: none;
+            }
+          }
+        }
+      }
+    }
     .impact{
       .content{
         grid-template-columns: 1fr;
+        .left, .right{
+          div{
+            p{
+              text-align: left;
+            }
+          }
+        }
       }
       hr{
         width: 100%;
