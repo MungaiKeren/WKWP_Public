@@ -186,6 +186,13 @@
         .list {
           grid-template-columns: 1fr !important;
         }
+        .right{
+          .pub{
+            .stk{
+              grid-template-columns: 1fr;
+            }
+          }
+        }
       }
     }
     @include maxwidth(tablet) {
