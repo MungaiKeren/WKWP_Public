@@ -326,4 +326,63 @@
             }
         }
     }
+
+    @include maxwidth(mobile) {
+        
+    }
+    @include maxwidth(tablet) {
+        .hero{
+            .content{
+                h4{
+                    margin-top: 3em;
+                    padding: 10px;
+                }
+            }   
+        }
+        .vids{
+            padding: 2em;
+            .two-equal{
+                gap: 1em;
+                padding: 0;
+                grid-template-columns: 1fr;
+                .btn{
+                    text-align: center;
+                }
+            }
+        }
+        .testimonials{
+            padding: 2em 2em;
+            .two{
+                grid-template-columns: 1fr;
+                gap: 2em;
+            }
+            .wrapper, .wrapper3, .wrapper2{
+                margin-left: 0;
+                img{
+                    position: static;
+                }
+            }
+            .wrapper2{
+                margin-top: 0;
+                img{
+                    position: static !important;
+                }
+            }
+            .wrapper3{
+                img{
+                    margin-left: -60px !important;
+                    margin-top: 161px !important;
+                }
+            }
+        }
+        .profiles{
+            .two-equal{
+                grid-template-columns: 1fr;
+                padding: 2em 2em;
+                .item{
+                    width: 100%;
+                }
+            }
+        }
+    }
 }

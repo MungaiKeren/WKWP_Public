@@ -24,7 +24,7 @@ export default function Testimonials(props) {
 
         <div className="wrapper2">
           <div className="txt">
-            <p className="title">Testimony 1</p>
+            <p className="title">Testimony 2</p>
             <p>
               "Thanks to the Western Kenya Water Project, our lives have been
               transformed. We used to walk long distances to fetch water, often
@@ -42,7 +42,7 @@ export default function Testimonials(props) {
           <img src={user} alt="" />
         </div>
         <div className="txt">
-          <p className="title">Testimony 1</p>
+          <p className="title">Testimony 3</p>
           <p>
             "Thanks to the Western Kenya Water Project, our lives have been
             transformed. We used to walk long distances to fetch water, often
