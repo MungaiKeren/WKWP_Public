@@ -1,9 +1,7 @@
-import NewPost from "../components/News/NewPost";
 import Header from "../components/Utils/header";
 import "../Styles/singlepost.scss";
 
 import React, { useEffect, useState } from "react";
-import EditNews from "../components/News/EditNews";
 import placeholder from "../assets/images/placeholder.jpg";
 import Footer from "../components/Utils/footer";
 

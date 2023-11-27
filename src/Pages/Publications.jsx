@@ -18,7 +18,7 @@ export default function Publications(props) {
     setCurrentPage(pageNumber);
   };
   useEffect(() => {
-    if (filter == "All") {
+    if (filter === "All") {
       setLoading(true);
       fetch(`/api/publications/paginated/${(currentPage - 1) * 12}`)
         .then((res) => {
@@ -87,7 +87,7 @@ export default function Publications(props) {
                   placeholder="Type to search"
                   required
                   onChange={(e) => {
-                    if (e.target.value == "") {
+                    if (e.target.value === "") {
                       setData(null);
                       setRefresh(!refresh);
                     }

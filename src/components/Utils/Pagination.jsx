@@ -13,7 +13,7 @@ const Pagination = ({
   const [pageNumbers, setPageNumbers] = useState(pn);
 
   useEffect(() => {
-    if (currentPage % 5 == 0 && currentPage < pages) {
+    if (currentPage % 5 === 0 && currentPage < pages) {
       const totalPages = pages - currentPage < 5 ? pages - currentPage : 5;
       let pn = Array.from(
         { length: totalPages },

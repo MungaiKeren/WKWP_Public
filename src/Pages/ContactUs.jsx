@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState} from "react";
 import Footer from "../components/Utils/footer";
 import "../Styles/ContactUs.scss";
 import Header from "../components/Utils/header";

@@ -8,7 +8,7 @@ function NavLink(props) {
   return (
     <div
       onMouseLeave={() => {
-        if (props.txt == "Portals") {
+        if (props.txt === "Portals") {
           props.setIsOpen(false);
         }
       }}
@@ -17,7 +17,7 @@ function NavLink(props) {
       <div
         className="navlink"
         onMouseOver={() => {
-          if (props.txt == "Portals") {
+          if (props.txt === "Portals") {
             props.setIsOpen(true);
           }
         }}
@@ -26,15 +26,15 @@ function NavLink(props) {
           <a
             data-aos="zoom-in"
             className="active"
-            href={props.txt == "Portals" ? "#" : props.url}
+            href={props.txt === "Portals" ? "#" : props.url}
           >
             {props.txt}
-            {props.txt == "Portals" && <i className="fa ">&#xf107;</i>}
+            {props.txt === "Portals" && <i className="fa ">&#xf107;</i>}
           </a>
         ) : (
-          <a data-aos="zoom-in" href={props.txt == "Portals" ? "#" : props.url}>
+          <a data-aos="zoom-in" href={props.txt === "Portals" ? "#" : props.url}>
             {props.txt}
-            {props.txt == "Portals" && <i className="fa">&#xf107;</i>}
+            {props.txt === "Portals" && <i className="fa">&#xf107;</i>}
           </a>
         )}
       </div>

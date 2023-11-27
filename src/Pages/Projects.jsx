@@ -1,10 +1,8 @@
 import "../Styles/projects.scss";
 import { useEffect, useState } from "react";
 import Header from "../components/Utils/header";
-import BlogPost from "../components/News/BlogPost";
 import Hero from "../components/Home/Hero";
 import Footer from "../components/Utils/footer";
-import logo from "../assets/images/wb.png";
 import { useRef } from "react";
 import Pagination from "../components/Utils/Pagination";
 import WaveLoading from "../components/Utils/WaveLoading";
@@ -20,7 +18,7 @@ export default function Projects(props) {
     setCurrentPage(pageNumber);
   };
   useEffect(() => {
-    if (filter == "All") {
+    if (filter === "All") {
       setLoading(true);
       fetch(`/api/projects/paginated/${(currentPage - 1) * 12}`)
         .then((res) => {
@@ -134,7 +132,7 @@ export default function Projects(props) {
                   placeholder="Type to search"
                   required
                   onChange={(e) => {
-                    if (e.target.value == "") {
+                    if (e.target.value === "") {
                       setData(null);
                       setRefresh(!refresh);
                     }
@@ -142,7 +140,7 @@ export default function Projects(props) {
                 />
                 <button
                   onClick={() => {
-                    if (srch.current.value != "") {
+                    if (srch.current.value !== "") {
                       search(srch.current.value);
                     }
                   }}
