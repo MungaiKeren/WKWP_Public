@@ -110,7 +110,28 @@
     }
 
     @include maxwidth (mobile) {
-
+        .about{
+            grid-template-columns: 1fr;
+            padding: 2em;
+            .left{
+                margin: 0;
+            }
+            .right{
+                display: none;
+            }
+        }
+        .two-equal{
+            padding: 2em;
+            gap: 1em;
+            grid-template-columns: 1fr;
+            p{
+                width: 100%;
+                padding: 1em;
+            }
+            .text-center{
+                display: none;
+            }
+        }
     }
     @include maxwidth (tablet) {
         .about{
@@ -130,6 +151,5 @@
                 width: 100%;
             }
         }
-
     }
 }

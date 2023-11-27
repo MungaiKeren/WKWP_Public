@@ -184,7 +184,8 @@
     }
 
     .testimonials{
-        padding: 2em 4em;
+        padding: 2em 4em;        
+        overflow: hidden;
         h3{
             color: $primary;
             font-size: xxx-large;
