@@ -979,7 +979,32 @@
     }
   }
   @include maxwidth(tablet) {
-    
+    .hero-section{
+      height: auto;
+      .content{
+        padding: 0;
+        .row{
+          display: block;
+          .left{
+            display: none;
+          }
+        }
+        h2{
+          padding-bottom: 0 !important;
+        }
+      }
+    }
+    .milestones{
+      hr{
+        width: 100%;
+        margin-bottom: 1em;
+      }
+      .two-equal{
+        grid-template-columns: 1fr;
+        padding: 0;
+        gap: 1em;
+      }
+    }
   }
 }
 
