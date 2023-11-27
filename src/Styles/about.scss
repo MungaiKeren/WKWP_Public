@@ -108,4 +108,28 @@
             border: 1px solid $secondary;
         }
     }
+
+    @include maxwidth (mobile) {
+
+    }
+    @include maxwidth (tablet) {
+        .about{
+            grid-template-columns: 1fr;
+            padding: 2em;
+            .left{
+                margin: 0;
+            }
+            .right{
+                display: none;
+            }
+        }
+        .two-equal{
+            padding: 2em;
+            gap: 2em;
+            p{
+                width: 100%;
+            }
+        }
+
+    }
 }
