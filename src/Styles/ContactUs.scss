@@ -128,4 +128,22 @@
       }
     }
   }
+  @include maxwidth(tablet) {
+    .hero{
+      .txt{
+        padding: 2em;
+        width: 100%;
+      }
+    }
+    .form-content{
+      .right{
+        display: none;
+      }
+    }
+    .more-info{
+      width: 100%;
+      gap: 1em;
+      padding: 2em;
+    }
+  }
 }
