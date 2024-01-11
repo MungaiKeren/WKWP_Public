@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "../Styles/success.scss";
 import Header from "../components/Utils/header";
 import Footer from "../components/Utils/footer";
 import img from "../assets/images/girl.png";
 import story from "../assets/images/story1.png";
 import play from "../assets/images/play icon.png";
+import bg7 from "../assets/images/bg7.jpg";
 import Partners from "../components/Home/Partners";
 import Testimonials from "../components/Success/Testimonials";
 import FeaturedProfiles from "../components/Success/FeaturedProfiles";
@@ -30,8 +31,28 @@ const YouTubePopup = ({ videoId, onClose }) => {
   );
 };
 
+const storysData = [
+  {
+    image: story,
+    icon: play,
+    title: "Data Collection from beneficiaries",
+    description:
+      "In the remote village of Bonde, plagued by waterborne diseases and water scarcity, the Water for Life NGO spearheaded atransformative project. By drilling a borehole, installing a network of pipes, and engaging the community in hygiene and water management education, the NGO provided accessible clean water. This endeavor drastically reduced disease incidences, empowered the community, improved school attendance, and enhanced overall quality of life, showcasing the profound impact of clean water access on transforming lives and entire communities.",
+    video_url: "https://www.youtube.com/embed/1cz-quNS3n8?si=qUNhy6wdPAiY5lDI",
+  },
+  {
+    image: bg7,
+    icon: play,
+    title: "Data Collection from beneficiaries",
+    description:
+      "In the remote village of Bonde, plagued by waterborne diseases and water scarcity, the Water for Life NGO spearheaded atransformative project. By drilling a borehole, installing a network of pipes, and engaging the community in hygiene and water management education, the NGO provided accessible clean water. This endeavor drastically reduced disease incidences, empowered the community, improved school attendance, and enhanced overall quality of life, showcasing the profound impact of clean water access on transforming lives and entire communities.",
+    video_url: "https://www.youtube.com/embed/1cz-quNS3n8?si=qUNhy6wdPAiY5lDI",
+  },
+];
+
 export default function SuccessStories() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const openPopup = () => {
     setIsPopupOpen(true);
@@ -40,6 +61,15 @@ export default function SuccessStories() {
   const closePopup = () => {
     setIsPopupOpen(false);
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % storysData.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  },[storysData.length]);
+
   return (
     <div className="success">
       <Header active="Success Stories" />
@@ -59,28 +89,34 @@ export default function SuccessStories() {
         </h4>
 
         {isPopupOpen && <YouTubePopup onClose={closePopup} />}
-        <div className="two-equal">
-          <div className="left">
-            <img src={story} className="main-img" alt="" />
-            <img src={play} onClick={openPopup} className="play-icon" alt="" />
-          </div>
-          <div className="right">
-            <h5>Data Collection from beneficiaries</h5>
-            <p>
-              In the remote village of Bonde, plagued by waterborne diseases and
-              water scarcity, the Water for Life NGO spearheaded a
-              transformative project. By drilling a borehole, installing a
-              network of pipes, and engaging the community in hygiene and water
-              management education, the NGO provided accessible clean water.
-              This endeavor drastically reduced disease incidences, empowered
-              the community, improved school attendance, and enhanced overall
-              quality of life, showcasing the profound impact of clean water
-              access on transforming lives and entire communities.
-            </p>
+        <div className="slideshow-container">
+          <div
+            className="slideshow-track"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {storysData.map((item, index) => {
+              return (
+                <div className="two-equal slideshow-slide" key={index}>
+                  <div className="left">
+                    <img src={item.image} className="main-img" alt={`Slide ${index}`} />
+                    <img
+                      src={item.icon}
+                      onClick={openPopup}
+                      className="play-icon"
+                      alt=""
+                    />
+                  </div>
+                  <div className="right">
+                    <h5>{item.title}</h5>
+                    <p>{item.description}</p>
 
-            <div className="btn">
-              <button onClick={openPopup}>Play Video</button>
-            </div>
+                    <div className="btn">
+                      <button onClick={openPopup}>Play Video</button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
